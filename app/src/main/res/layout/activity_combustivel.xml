@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/color_total"
+    tools:context=".CombustivelActivity">
+
+    <LinearLayout
+        android:id="@+id/ll_image2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@drawable/color_branca"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="25dp"
+            android:src="@drawable/imagesdinheiro"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_combustivel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Próximo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/rounder_bg"
+        android:textColorHint="@color/white"
+        app:counterMaxLength="6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Tv_passo1">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_combustivel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ex: 1.75"
+            android:textColorHint="@color/white"
+            android:inputType="numberDecimal" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/Tv_preco"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Preço do Combustível"
+        android:textSize="32dp"
+        android:textColor="@color/white"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_image2" />
+
+    <TextView
+        android:id="@+id/Tv_passo1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Paso 1 de 3"
+        android:textSize="18sp"
+        android:textColor="@color/primary500"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/Tv_preco"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
